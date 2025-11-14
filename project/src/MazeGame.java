@@ -14,6 +14,8 @@ public abstract class MazeGame {
         showMaze();
     }
 
+
+
     private void initializeComponents() {
         mainFrame = new JFrame("Maze Program");
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -77,9 +79,9 @@ public abstract class MazeGame {
 
         mainFrame.add(mainPanel, BorderLayout.CENTER);
 
-        basic.addActionListener(e -> new MazeFrame(mainFrame.getSize(),mainFrame.getLocation()));
-        normal.addActionListener(e -> new MazeFrame(mainFrame.getSize(),mainFrame.getLocation()));
-        difficult.addActionListener(e -> new MazeFrame(mainFrame.getSize(),mainFrame.getLocation()));
+        basic.addActionListener(e -> new MazeFrame(mainFrame.getSize(),mainFrame.getLocation(), "Basic"));
+        normal.addActionListener(e -> new MazeFrame(mainFrame.getSize(),mainFrame.getLocation(), "Normal"));
+        difficult.addActionListener(e -> new MazeFrame(mainFrame.getSize(),mainFrame.getLocation(), "Difficult"));
     }
 
 
